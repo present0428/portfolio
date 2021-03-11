@@ -138,35 +138,35 @@
                 </ul>
             </article>
         </section>
-        <article class="post blog">
-            <header>
-                <h2>Blog</h2>
-            </header>
-            <div class="slider">
-                <div class="slide showing">
-                    <a href="https://xxoyeong.tistory.com/85">
-                        <img src="images/pic05.jpg" alt="">
-                    </a>
-                </div>
-                <div class="slide">
-                    <a href="https://xxoyeong.tistory.com/85">
-                        <img src="images/pic04.jpg" alt="">
-                    </a>
-                </div>
-                <div class="slide">
-                    <a href="https://xxoyeong.tistory.com/85">
-                        <img src="images/pic03.jpg" alt="">
-                    </a>
-                </div>
-                <div class="slide">
-                    <a href="https://xxoyeong.tistory.com/85">
-                        <img src="images/pic02.jpg" alt="">
-                    </a>
-                </div>
-                <button type="button" class="left btns" onclick="left_move();"><</button>
-                <button type="button" class="right btns" onclick="right_move();">></button>
-            </div>
-        </article>
+<!--        <article class="post blog">-->
+<!--            <header>-->
+<!--                <h2>Blog</h2>-->
+<!--            </header>-->
+<!--            <div class="slider">-->
+<!--                <div class="slide showing">-->
+<!--                    <a href="https://xxoyeong.tistory.com/85">-->
+<!--                        <img src="images/pic05.jpg" alt="">-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                <div class="slide">-->
+<!--                    <a href="https://xxoyeong.tistory.com/85">-->
+<!--                        <img src="images/pic04.jpg" alt="">-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                <div class="slide">-->
+<!--                    <a href="https://xxoyeong.tistory.com/85">-->
+<!--                        <img src="images/pic03.jpg" alt="">-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                <div class="slide">-->
+<!--                    <a href="https://xxoyeong.tistory.com/85">-->
+<!--                        <img src="images/pic02.jpg" alt="">-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                <button type="button" class="left btns" onclick="left_move();"><</button>-->
+<!--                <button type="button" class="right btns" onclick="right_move();">></button>-->
+<!--            </div>-->
+<!--        </article>-->
     </div>
 
     <!-- Footer -->
@@ -192,37 +192,6 @@
 
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script>
-    const showing_class = "showing";
-    const firstslide = document.querySelector(".slide:nth-child(1)");
-    const lastslide = document.querySelector(".slide:nth-child(4)");
-    const left_btn = document.querySelector(".left");
-    function right_move(){
-        const currentslide = document.querySelector(".showing");
-        if (currentslide) {
-            const nextslide = currentslide.nextElementSibling;
-            currentslide.classList.remove(showing_class);
-            if(nextslide != left_btn){
-                nextslide.classList.add(showing_class);
-            }
-            else{
-                firstslide.classList.add(showing_class);
-            }
-        }
-    }
-    function left_move(){
-        const currentslide = document.querySelector(".showing");
-        if (currentslide){
-            const prevslide = currentslide.previousElementSibling;
-            currentslide.classList.remove(showing_class);
-            if(prevslide){
-                prevslide.classList.add(showing_class);
-            }
-            else{
-                lastslide.classList.add(showing_class);
-            }
-        }
-    }
-</script>
+
 </body>
 </html>
